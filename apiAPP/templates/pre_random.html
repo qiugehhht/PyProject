@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Accuracy and Prediction{% endblock %}
+{% block content %}
+<body style="background-color:white;">
+        <div align = "center" style="background-color:rgb(0, 238, 255);">
+        <h3>The Accuracy of your Algo is:{{ result }}</h3>
+        </div>
+        <div align="center">
+        <form method="post" >
+            <label for="c_acc1">ACC1(Chest):</label></br>
+            <input type="text" name="c_acc1"/></br>
+            <label for="c_acc2">ACC2(Chest):</label></br>
+            <input type="text" name="c_acc2"/></br>
+            <label for="c_acc3">ACC3(Chest):</label></br>
+            <input type="text" name="c_acc3"/></br>
+            <label for="c_ecg">ECG(Chest):</label></br>
+            <input type="text" name="c_ecg"/></br>
+            <label for="c_resp">Resp(Chest):</label></br>
+            <input type="text" name="c_resp"/></br>
+            <label for="w_acc1">ACC1(Wrist):</label></br>
+            <input type="text" name="w_acc1"/></br>
+            <label for="w_acc2">ACC2(Wrist):</label></br>
+            <input type="text" name="w_acc2"/></br>
+            <label for="w_acc3">ACC3(Wrist):</label></br>
+            <input type="text" name="w_acc3"/></br>
+            <label for="w_bvp">BVP(Wrist):</label></br>
+            <input type="text" name="w_bvp"/></br>
+            <label for="w_eda">EDA(Wrist):</label></br>
+            <input type="text" name="w_eda"/></br>
+            <label for="w_temp">Temp(Wrist):</label></br>
+            <input type="text" name="w_temp"/></br></br>
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </form>
+        </div>
+        <div align = "center" style="background-color:rgb(132, 235, 14);">
+        <h3>Your prediction is (click submit please): {{ prediction }}</h3>
+        <h5>Transient periods (ID: 0); Sitting (ID: 1); Ascending and descending stairs (ID: 2); Table soccer (ID: 3); Cycling (ID: 4)</h5>
+        <h5>Driving a car (ID: 5); Lunch break (ID: 6); Walking (ID: 7); Working (ID: 8).</h5>
+        </div>
+</body>
+{% endblock %}

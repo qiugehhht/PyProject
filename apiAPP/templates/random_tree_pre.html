@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<body background="https://miro.medium.com/max/4725/1*7MK-WgDf8HA8isSGDjPhyw.png">
+    <div align = "center">
+    <h3>Choose Your Random Forest Parameters</h3>
+    </div>
+    <div align="center">
+        <form method="post">
+            <label for="ntrees">n estimators:</label></br>
+            <input type="text" name="ntrees"/></br>
+            <label for="mtry">m features:</label></br>
+            <input type="text" name="mtry"/><br>
+            <label for="depth">Depth:</label></br>
+            <input type="text" name="depth"/></br></br>
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </form>
+    </div>
+</body>
+{% endblock %}
